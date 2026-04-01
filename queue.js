@@ -59,7 +59,6 @@ class ArrayQueue {
     }
 }
 
-
 const queue = new ArrayQueue();
 queue.enqueue(10);
 queue.enqueue(20);
@@ -69,3 +68,50 @@ queue.dequeue();
 queue.print();   
 console.log(queue); 
 
+
+class CircularQueue {
+    constructor(size){
+        this.size = size
+        this.queueList = new Array(size);
+        this.first = -1
+        this.last = -1
+    }
+
+    enqueue(element){
+        if ((this.last + 1) % this.size === this.first){
+            console.log(`This queue is full. ${element} can't be added`);
+            return;
+        }
+
+        if (this.first === -1) this.first = 0;
+        this.last = (this.last + 1) % this.size
+
+        this.queueList[this.last] = element
+    }
+
+    dequeue(){
+        if (this.first === -1) return null; 
+
+        const element = this.queueList[this.first];
+        this.queueList(this.first) = null; 
+        console.log(`${element} was removed`);
+        
+        if(this.first === this.last){
+            this.first = -1;
+            this.length = -1;
+        }else{
+            this.first = (this.first + 1) % this.size
+        }
+    }
+}
+
+const circular = new CircularQueue(4);
+
+circular.enqueue(10)
+circular.enqueue(20)
+circular.enqueue()
+circular.enqueue(30) 
+circular.enqueue(40)
+circular.enqueue(50)
+
+console.log(circular);
