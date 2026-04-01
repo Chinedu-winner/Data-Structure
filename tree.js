@@ -30,8 +30,33 @@ const binaryRoot = new BinaryTreeNode(1);
 binaryRoot.left = new BinaryTreeNode(2)
 binaryRoot.right = new BinaryTreeNode(3)
 
-console.log(binaryRoot);
-
-
 binaryRoot.left.left = new BinaryTreeNode(4); 
 binaryRoot.left.right = new BinaryTreeNode(5); 
+
+function preorder(node, out=[]) {
+    if (!node) return out;
+    out.push(node.value);
+    preorder(node.left, out);
+    preorder(node.right, out);
+    return out;
+}   
+
+function inorder(node, out=[]) {
+    if (!node) return out;
+    inorder(node.left, out);
+    out.push(node.value);
+    inorder(node.right, out);
+    return out;
+}
+
+function postorder(node, out=[]) {
+    if (!node) return out;
+    postorder(node.left, out);
+    postorder(node.right, out);
+    out.push(node.value);
+    return out;
+}
+
+console.log(preorder(binaryRoot), "preorder");
+console.log(inorder(binaryRoot), "inorder");
+console.log(postorder(binaryRoot), "postorder");
