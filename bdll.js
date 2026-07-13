@@ -106,10 +106,10 @@
         const res = [];
         let current = this.head;
         for (let cur = 0; cur < this.length; cur++) {
-            this.push(current.value)
+            res.push(current.val)
             current = current.next;
         }
-        return current;
+        return res;
     }
 
     reverse(){

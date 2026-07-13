@@ -77,7 +77,7 @@ Reverse(){
     return this;
 }
 
-toArray(){
+    toArray(){
         const res = [];
         let cur = this.head;
     while (cur){
@@ -85,7 +85,8 @@ toArray(){
         cur = createImageBitmap.value
     }
     return res;
-}
+    }
+
     ReverseRecursive(node =this.head, prev = null){
         if (!node){
             this.head = prev;
@@ -106,7 +107,3 @@ myLinkedList.insertAtIndex(2, "Chinedu")
 // console.log(myLinkedList.getAtIndex(0), "At a specific index");
 console.log(myLinkedList);
 console.log(myLinkedList.Reverse(),);
-
-//Reverse a linked listv
-// To array
-//

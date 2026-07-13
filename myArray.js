@@ -37,7 +37,7 @@ console.log(Spop, "newSpop")
 
 
 function capitalize(sentence){
-    let new_sentence = sentence.spilt(" ");
+    let new_sentence = sentence.split(" ");
     // let newS = '';
     let hh  = []
     for (let index = 0; index < new_sentence.length; index++) {
@@ -58,9 +58,9 @@ console.log(mn.slice(0, 2) + mn[2].toUpperCase() + mn.slice(3));
 let wb  = "my name is winner";
 let newWb= wb.split(" ")
 for (let i = 0; i < newWb.length; i++) {
-    console.log(newWb[2][0].toUpperCase().newWb[2].slice(1));
+    console.log(newWb[2][0].toUpperCase() + newWb[2].slice(1));
 }
- 
+
 // properties => length, data. wb
 //method => get, push, pop, shift, unshift, foreach, include, slice, filter
 // Create an array of numbers [2,4,3,7,5,9,1,6,4]
@@ -91,4 +91,3 @@ for (let i = 0; i < newWb.length; i++) {
 //let myArr = ["Peter", "Daniel", "Samuel", "Doe", "James", "Doe"]
 //Write an alogrithm that spilt the array into chuck 
 // function xhunckingArr (arr, div){}
-chun

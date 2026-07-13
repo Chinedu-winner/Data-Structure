@@ -11,15 +11,15 @@ class ArrayQueue {
     this.length = 0;
 }
 
-    enqueue(value) {
-        const newNode = new Node(value)
-        if (!this.first){
-            this.first = this.last = newNode
-        }else{
-            this.last.next = newNode;
-            this.last = newNode;
-        }
-        this.length ++
+enqueue(value) {
+    const newNode = new Node(value)
+    if (!this.first){
+        this.first = this.last = newNode
+    }else{
+        this.last.next = newNode;
+        this.last = newNode;
+    }
+    this.length ++
 }
 
     dequeue() {
