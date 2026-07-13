@@ -68,7 +68,7 @@ Reverse(){
     let current =  this.head;
     this.tail = this.head;
     for (let index = 0; index < this.length; index++) {
-        const next = current.index;
+        const next = current.next;
         current.next = prev;
         prev = current
         current = next
@@ -94,7 +94,7 @@ Reverse(){
         }
         const next = node.next;
         node.next = prev;
-        return this = this.ReverseRecursive(next, node)
+        return this.ReverseRecursive(next, node);
     } 
 }
 
